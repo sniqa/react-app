@@ -1,25 +1,34 @@
-import { DownloadIcon, UploadIcon, TrashIcon, PlusIcon } from '@assets/Icons'
+import {
+	DownloadIcon,
+	PlusIcon,
+	SearchIcon,
+	TrashIcon,
+	UploadIcon,
+} from '@assets/Icons'
 
 const TableToolbar = () => {
-  return (
-    <div className="h-10 pt-2 pl-4">
-      <a className="pr-2 relative font-medium text-indigo-600 before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-indigo-600 before:transition hover:before:scale-100">
-        <TrashIcon />
-      </a>
+	return (
+		<div className="h-12 px-4 box-border text-blue-600 flex items-center justify-between">
+			<section className="w-24 flex justify-around">
+				<TrashIcon />
+				<DownloadIcon />
+				<UploadIcon />
+				<PlusIcon />
+			</section>
 
-      <a className="pr-2 relative font-medium text-indigo-600 before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-indigo-600 before:transition hover:before:scale-100">
-        <DownloadIcon />
-      </a>
-
-      <a className="pr-2 relative font-medium text-indigo-600 before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-indigo-600 before:transition hover:before:scale-100">
-        <UploadIcon />
-      </a>
-
-      <a className="pr-2 relative font-medium text-indigo-600 before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-indigo-600 before:transition hover:before:scale-100">
-        <PlusIcon />
-      </a>
-    </div>
-  )
+			<section>
+				<div className="flex items-center border px-2 py-1 rounded-md">
+					<input
+						type="search"
+						id="UserEmail"
+						placeholder=""
+						className="w-full rounded-md border-gray-200 pr-10 sm:text-sm outline-none"
+					/>
+					<SearchIcon />
+				</div>
+			</section>
+		</div>
+	)
 }
 
 export default TableToolbar
